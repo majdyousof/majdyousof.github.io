@@ -1,16 +1,34 @@
 .navbar {
-    box-shadow: none; /* Remove the default shadow for a cleaner look */
-  }
-  
-  .MuiButton-root {
-    font-family: 'cmu_serifroman', serif !important;
-    font-weight: bold !important;
-    color: #333 !important;
-    margin-right: 1.5rem;
-  }
-  
-  .MuiButton-root:hover {
-    text-decoration: underline; /* Add underline on hover to mimic links in LaTeX documents */
-    background-color: transparent; /* Remove background color change on hover */
-  }
-  
+  box-shadow: none !important; /* Remove the default shadow for a cleaner look */
+  background-color: none !important; /* Remove the default background color */
+  height: 60px; /* Adjust height to make the AppBar skinnier */
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between; /* Distribute space between brand and buttons */
+  align-items: center; /* Center align items vertically */
+  height: 100%; /* Ensure Toolbar fills the AppBar height */
+}
+
+.navbar-brand {
+  font-family: 'cmu_serifroman', serif !important; /* Change font family */
+  font-weight: bold; /* Add bold font weight */
+  text-transform: none !important; /* Remove uppercase transformation */
+}
+
+.navbar-buttons {
+  display: flex; /* Align buttons horizontally */
+}
+
+.MuiButton-root {
+  font-family: 'cmu_serifroman', serif !important;
+  font-weight: bold !important;
+  margin-left: 1.5rem; /* Space between buttons */
+  text-transform: none !important; /* Remove uppercase transformation */
+}
+
+.MuiButton-root:hover {
+  text-decoration: underline !important; /* Add underline on hover to mimic links in LaTeX documents */
+  background-color: transparent !important; /* Remove background color change on hover */
+}
