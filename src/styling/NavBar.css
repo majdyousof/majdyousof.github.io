@@ -1,0 +1,16 @@
+.navbar {
+    box-shadow: none; /* Remove the default shadow for a cleaner look */
+  }
+  
+  .MuiButton-root {
+    font-family: 'cmu_serifroman', serif !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    margin-right: 1.5rem;
+  }
+  
+  .MuiButton-root:hover {
+    text-decoration: underline; /* Add underline on hover to mimic links in LaTeX documents */
+    background-color: transparent; /* Remove background color change on hover */
+  }
+  
