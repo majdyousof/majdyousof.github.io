@@ -7,7 +7,7 @@
 .toolbar {
   display: flex;
   justify-content: space-between; /* Distribute space between brand and buttons */
-  align-items: center; /* Center align items vertically */
+  align-items: bottom; /* Center align items vertically */
   height: 100%; /* Ensure Toolbar fills the AppBar height */
 }
 
@@ -19,8 +19,8 @@
 
 .brand-dot {
   color: rgb(255, 153, 0); /* Set the color of the full stop to red or any desired color */
-  font-size: 2rem; /* Increase the font size of the full stop */
-  vertical-align: middle; /* Align with the middle of the text */
+  font-size: 3rem; /* Increase the font size of the full stop */
+  vertical-align: 0%; /* Align with the middle of the text */
 }
 
 .navbar-buttons {

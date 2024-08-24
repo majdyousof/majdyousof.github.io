@@ -1,0 +1,17 @@
+.App {
+    font-family: 'cmu_serifroman', serif;
+  }
+  
+  .content-container {
+    max-width: 60vw; /* Set the maximum width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px; /* Optional: Add some padding */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  /* Optional: Adjust body padding if needed */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
