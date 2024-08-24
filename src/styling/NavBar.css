@@ -17,6 +17,12 @@
   text-transform: none !important; /* Remove uppercase transformation */
 }
 
+.brand-dot {
+  color: rgb(255, 153, 0); /* Set the color of the full stop to red or any desired color */
+  font-size: 2rem; /* Increase the font size of the full stop */
+  vertical-align: middle; /* Align with the middle of the text */
+}
+
 .navbar-buttons {
   display: flex; /* Align buttons horizontally */
 }

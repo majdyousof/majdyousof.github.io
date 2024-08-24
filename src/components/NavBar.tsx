@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
     <AppBar position="sticky" className="navbar">
       <Toolbar className="toolbar">
         <Typography variant='h4' className="navbar-brand">
-          Majd Yousof
+          Majd Yousof<span className="brand-dot">.</span>
         </Typography>
         <div className="navbar-buttons">
           <Button color="inherit" href="#home">Home</Button>
