@@ -1,6 +1,6 @@
 .navbar {
   box-shadow: none !important; /* Remove the default shadow for a cleaner look */
-  background-color: none !important; /* Remove the default background color */
+  background-color: transparent !important; /* Remove the default background color */
   height: 60px; /* Adjust height to make the AppBar skinnier */
 }
 
@@ -35,6 +35,7 @@
 }
 
 .MuiButton-root:hover {
+  color: rgb(255, 153, 0);
   text-decoration: underline !important; /* Add underline on hover to mimic links in LaTeX documents */
   background-color: transparent !important; /* Remove background color change on hover */
 }
