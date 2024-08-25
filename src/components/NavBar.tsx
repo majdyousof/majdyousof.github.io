@@ -26,6 +26,11 @@ const NavBar: React.FC = () => {
     setAnimatedLetters((prev) => new Set(prev).add(index));
   };
 
+  const handleTouchMove = (index: number) => {
+    // Keep track of touch movement to trigger animation
+    setAnimatedLetters((prev) => new Set(prev).add(index));
+  };
+
   const handleAnimationEnd = (index: number) => {
     setAnimatedLetters((prev) => {
       const updated = new Set(prev);
@@ -52,6 +57,7 @@ const NavBar: React.FC = () => {
               className={`jumping-letter ${animatedLetters.has(index) ? 'jump' : ''}`}
               onMouseEnter={() => handleMouseEnter(index)}
               onTouchStart={() => handleTouchStart(index)}
+              onTouchMove={() => handleTouchMove(index)}
               onAnimationEnd={() => handleAnimationEnd(index)}
             >
               {char === ' ' ? '\u00A0' : char}{' '}

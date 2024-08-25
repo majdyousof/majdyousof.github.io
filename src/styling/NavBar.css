@@ -72,6 +72,12 @@
   }
 }
 
+/* Ensure touch events are handled correctly */
+.jumping-letter:active,
+.jumping-letter:focus {
+  animation: jump 0.6s ease-in-out forwards;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .navbar {
