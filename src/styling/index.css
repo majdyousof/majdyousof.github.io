@@ -17,9 +17,10 @@ body {
   font-family: 'cmu_serifroman', serif;
   line-height: 1.6;
   margin: 0;
-  padding: 2px;
+  padding: 0; /* Removed the 2px padding to avoid unintended spacing issues */
 }
 
+/* Header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'cmu_serifroman', serif;
   font-weight: bold;
@@ -29,17 +30,22 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   text-align: justify;
-  text-indent: 2em;
+}
+
+.orange {
+  color: orange;
 }
 
 a {
   text-decoration: none;
+  color: inherit; /* Ensure links inherit the color of the surrounding text */
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* Code block styling */
 code {
   font-family: 'Courier New', Courier, monospace;
   background-color: #eee;
@@ -49,4 +55,57 @@ code {
 
 .katex {
   font-size: 1.2em;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Slightly smaller text for readability on smaller screens */
+    padding: 10px; /* Add padding for better spacing on mobile */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    text-indent: 1.5em; /* Reduce text-indent for better formatting on mobile */
+    margin: 0 0 1rem 0; /* Add spacing between paragraphs */
+  }
+
+  code {
+    font-size: 0.9em; /* Slightly smaller code font size for mobile */
+  }
+
+  .katex {
+    font-size: 1em; /* Adjust math font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Further reduce text size for very small screens */
+    padding: 8px; /* Adjust padding for very small screens */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.25rem; /* Further adjust heading size */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    text-indent: 1em; /* Further reduce text-indent */
+    margin: 0 0 0.75rem 0; /* Adjust paragraph spacing */
+  }
+
+  code {
+    font-size: 0.8em; /* Smaller code font size for very small screens */
+  }
+
+  .katex {
+    font-size: 0.9em; /* Further adjust math font size */
+  }
 }

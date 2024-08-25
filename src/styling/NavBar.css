@@ -1,15 +1,16 @@
 .navbar {
   box-shadow: none !important; /* Remove the default shadow for a cleaner look */
-  background-color: transparent !important; /* Remove the default background color */
+  background-color: #242424 !important; /* Remove the default background color */
   height: 60px; /* Adjust height to make the AppBar skinnier */
   position: static; /* Remove fixed positioning */
   z-index: 10; /* Ensure the navbar is on top */
+  padding: 0 1rem; /* Add padding to the navbar */
 }
 
 .toolbar {
   display: flex;
   justify-content: space-between; /* Distribute space between brand and buttons */
-  align-items: bottom; /* Center align items vertically */
+  align-items: center; /* Center align items vertically */
   height: 100%; /* Ensure Toolbar fills the AppBar height */
 }
 
@@ -17,17 +18,20 @@
   font-family: 'cmu_serifroman', serif !important; /* Change font family */
   font-weight: bold; /* Add bold font weight */
   text-transform: none !important; /* Remove uppercase transformation */
-  transition: filter 0.3s ease; /* Smooth transition for blur effect */
 }
 
 .brand-dot {
-  color: rgb(255, 153, 0); /* Set the color of the full stop to red or any desired color */
+  color: orange; /* Set the color of the full stop to red or any desired color */
   font-size: 3rem; /* Increase the font size of the full stop */
   vertical-align: 0%; /* Align with the middle of the text */
 }
 
 .navbar-buttons {
   display: flex; /* Align buttons horizontally */
+}
+
+.desktop-buttons {
+  display: flex;
 }
 
 .MuiButton-root {
@@ -38,7 +42,84 @@
 }
 
 .MuiButton-root:hover {
-  color: rgb(255, 153, 0);
+  color: orange !important; /* Change text color on hover */
   text-decoration: underline !important; /* Add underline on hover to mimic links in LaTeX documents */
   background-color: transparent !important; /* Remove background color change on hover */
+}
+
+.menu-button {
+  display: none !important; /* Initially hidden */
+}
+
+.jumping-letter {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.jump {
+  animation: jump 0.6s ease-in-out forwards;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 1rem 0; /* Adjust padding for mobile */
+
+  }
+
+  .toolbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem; /* Adjust brand size for mobile */
+  }
+
+  .brand-dot {
+    font-size: 2rem; /* Adjust size of dot for mobile */
+  }
+
+  .desktop-buttons {
+    display: none; /* Hide desktop buttons on mobile */
+  }
+
+  .menu-button {
+    display: block !important; /* Show menu button on mobile */
+  }
+
+  .MuiButton-root {
+    margin: 0.5rem 0; /* Adjust margin for mobile */
+    width: 100%;
+    font-size: 1rem; /* Adjust button size for mobile */
+  }
+
+  /* Menu Item Styling */
+  .menu-paper {
+    background-color: #3b3b3b !important; /* Match the background of the navbar */
+  }
+
+  .menu-item {
+    font-family: 'cmu_serifroman', serif !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+    color: white !important; /* Ensure text color is consistent */
+  }
+
+  .menu-item:hover {
+    color: orange !important;
+    text-decoration: underline !important; /* Match the hover effect of desktop buttons */
+  }
 }

@@ -1,16 +1,39 @@
 .App {
-    font-family: 'cmu_serifroman', serif;
-  }
-  
+  font-family: 'cmu_serifroman', serif;
+}
+
+.content-container {
+  max-width: 60vw; /* Set the maximum width of the content */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 80px 20px 20px 20px; /* Add padding at the top to make room for the navbar */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Adjust content for mobile screens */
+@media (max-width: 768px) {
   .content-container {
-    max-width: 60vw; /* Set the maximum width of the content */
-    margin: 0 auto; /* Center the content horizontally */
-    padding: 20px; /* Optional: Add some padding */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    max-width: 90vw; /* Increase max-width for better readability on smaller screens */
+    padding: 100px 10px 10px 10px; /* Adjust top padding for mobile */
   }
-  
-  /* Optional: Adjust body padding if needed */
-  body {
-    margin: 0;
-    padding: 0;
+
+  .App {
+    font-size: 14px; /* Optional: Decrease font size for mobile devices */
   }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    max-width: 95vw; /* Even more width for very small screens */
+    padding: 100px 5px 5px 5px; /* Further adjust padding for very small screens */
+  }
+
+  .App {
+    font-size: 12px; /* Optional: Further decrease font size for very small screens */
+  }
+}
+
+/* Optional: Adjust body padding if needed */
+body {
+  margin: 0;
+  padding: 0;
+}
