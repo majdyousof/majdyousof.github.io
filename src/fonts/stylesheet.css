@@ -1,31 +1,27 @@
 @font-face {
   font-family: 'cmu_serifroman';
-  src:
-    url('cmunrm-webfont.woff') format('woff');
+  src: url('cmunrm-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'cmu_serifroman';
-  src:
-    url('cmunti-webfont.woff') format('woff');
+  src: url('cmunti-webfont.woff') format('woff');
   font-weight: normal;
   font-style: italic; /* Indicates this is the italic style */
 }
 
 @font-face {
   font-family: 'cmu_serifroman';
-  src:
-    url('cmunbi-webfont.woff') format('woff');
+  src: url('cmunbi-webfont.woff') format('woff');
   font-weight: bold;
   font-style: italic; /* Indicates this is the bold italic style */
 }
 
 @font-face {
   font-family: 'cmu_serifroman';
-  src:
-    url('cmunbx-webfont.woff') format('woff');
+  src: url('cmunbx-webfont.woff') format('woff');
   font-weight: bold; /* Indicates this is the bold style */
   font-style: normal;
 }
