@@ -16,7 +16,7 @@
 
 .navbar-brand {
   font-family: 'cmu_serifroman', serif !important; /* Change font family */
-  font-weight: bold; /* Add bold font weight */
+  font-weight: bold !important; /* Add bold font weight */
   text-transform: none !important; /* Remove uppercase transformation */
 }
 
@@ -63,7 +63,8 @@
 }
 
 @keyframes jump {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -76,7 +77,6 @@
   .navbar {
     height: auto;
     padding: 1rem 0; /* Adjust padding for mobile */
-
   }
 
   .toolbar {

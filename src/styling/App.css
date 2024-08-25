@@ -23,12 +23,12 @@
 
 @media (max-width: 480px) {
   .content-container {
-    max-width: 95vw; /* Even more width for very small screens */
+    max-width: 90vw; /* Even more width for very small screens */
     padding: 100px 5px 5px 5px; /* Further adjust padding for very small screens */
   }
 
   .App {
-    font-size: 12px; /* Optional: Further decrease font size for very small screens */
+    font-size: 14px; /* Optional: Further decrease font size for very small screens */
   }
 }
 

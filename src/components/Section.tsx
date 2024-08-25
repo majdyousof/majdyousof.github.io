@@ -8,7 +8,9 @@ type SectionProps = {
 const Section: React.FC<SectionProps> = ({ title, children }) => {
   return (
     <section>
-      <h2><b>{title}</b></h2>
+      <h2>
+        <b>{title}</b>
+      </h2>
       {children}
     </section>
   );

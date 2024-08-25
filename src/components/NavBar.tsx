@@ -10,15 +10,17 @@ import { Typography } from '@mui/material';
 import '../styling/NavBar.css';
 
 const NavBar: React.FC = () => {
-  const [animatedLetters, setAnimatedLetters] = useState<Set<number>>(new Set());
+  const [animatedLetters, setAnimatedLetters] = useState<Set<number>>(
+    new Set()
+  );
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  
+
   const handleMouseEnter = (index: number) => {
-    setAnimatedLetters(prev => new Set(prev).add(index));
+    setAnimatedLetters((prev) => new Set(prev).add(index));
   };
 
   const handleAnimationEnd = (index: number) => {
-    setAnimatedLetters(prev => {
+    setAnimatedLetters((prev) => {
       const updated = new Set(prev);
       updated.delete(index);
       return updated;
@@ -37,25 +39,39 @@ const NavBar: React.FC = () => {
     <AppBar className="navbar">
       <Toolbar className="toolbar">
         <Typography variant="h4" className="navbar-brand">
-          {Array.from("Majd Yousof").map((char, index) => (
+          {Array.from('Majd Yousof').map((char, index) => (
             <span
               key={index}
               className={`jumping-letter ${animatedLetters.has(index) ? 'jump' : ''}`}
               onMouseEnter={() => handleMouseEnter(index)}
               onAnimationEnd={() => handleAnimationEnd(index)}
             >
-              {char === ' ' ? '\u00A0' : char} {/* Preserve space between words */}
+              {char === ' ' ? '\u00A0' : char}{' '}
+              {/* Preserve space between words */}
             </span>
           ))}
           <span className="brand-dot">.</span>
         </Typography>
         <div className="navbar-buttons">
           <div className="desktop-buttons">
-            <Button color="inherit" href="#home">Home</Button>
-            <Button color="inherit" href="#articles">Articles</Button>
-            <Button color="inherit" href="https://github.com/majdyousof/">Github</Button>
-            <Button color="inherit" href="https://www.linkedin.com/in/majdyousof/">LinkedIn</Button>
-            <Button color="inherit" href="#contact">Contact</Button>
+            <Button color="inherit" href="#home">
+              Home
+            </Button>
+            <Button color="inherit" href="#articles">
+              Articles
+            </Button>
+            <Button color="inherit" href="https://github.com/majdyousof/">
+              Github
+            </Button>
+            <Button
+              color="inherit"
+              href="https://www.linkedin.com/in/majdyousof/"
+            >
+              LinkedIn
+            </Button>
+            <Button color="inherit" href="#contact">
+              Contact
+            </Button>
           </div>
           <IconButton
             className="menu-button"

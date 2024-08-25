@@ -21,7 +21,12 @@ body {
 }
 
 /* Header styles */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'cmu_serifroman', serif;
   font-weight: bold;
   margin-top: 2rem;
@@ -64,14 +69,18 @@ code {
     padding: 10px; /* Add padding for better spacing on mobile */
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 1.5rem; /* Adjust heading size for smaller screens */
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
   }
 
   p {
-    text-indent: 1.5em; /* Reduce text-indent for better formatting on mobile */
     margin: 0 0 1rem 0; /* Add spacing between paragraphs */
   }
 
@@ -90,14 +99,18 @@ code {
     padding: 8px; /* Adjust padding for very small screens */
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 1.25rem; /* Further adjust heading size */
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
 
   p {
-    text-indent: 1em; /* Further reduce text-indent */
     margin: 0 0 0.75rem 0; /* Adjust paragraph spacing */
   }
 
