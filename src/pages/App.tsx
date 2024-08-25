@@ -1,9 +1,9 @@
 import React from 'react';
-import Section from './components/Section';
-import SubSection from './components/SubSection';
-import MathExample from './components/MathExample';
-import NavBar from './components/NavBar';
-import './styling/App.css';
+import Section from '../components/Section';
+import SubSection from '../components/SubSection';
+import MathExample from '../components/MathExample';
+import NavBar from '../components/NavBar';
+import '../styling/App.css';
 
 const App: React.FC = () => {
   return (

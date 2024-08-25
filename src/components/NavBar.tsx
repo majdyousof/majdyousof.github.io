@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import '../styling/NavBar.css';
 
@@ -54,10 +55,10 @@ const NavBar: React.FC = () => {
         </Typography>
         <div className="navbar-buttons">
           <div className="desktop-buttons">
-            <Button color="inherit" href="#home">
+            <Button color="inherit" component={Link} to="/">
               Home
             </Button>
-            <Button color="inherit" href="#articles">
+            <Button color="inherit" component={Link} to="/articles">
               Articles
             </Button>
             <Button color="inherit" href="https://github.com/majdyousof/">
@@ -94,16 +95,16 @@ const NavBar: React.FC = () => {
           >
             <MenuItem
               onClick={handleMenuClose}
-              component="a"
-              href="#home"
+              component={Link}
+              to="/"
               className="menu-item"
             >
               Home
             </MenuItem>
             <MenuItem
               onClick={handleMenuClose}
-              component="a"
-              href="#articles"
+              component={Link}
+              to="/articles"
               className="menu-item"
             >
               Articles
