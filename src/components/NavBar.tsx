@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import {AppBar, Button, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
+import {
+  AppBar,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import '../styling/NavBar.css';
@@ -11,6 +19,10 @@ const NavBar: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const handleMouseEnter = (index: number) => {
+    setAnimatedLetters((prev) => new Set(prev).add(index));
+  };
+
+  const handleTouchStart = (index: number) => {
     setAnimatedLetters((prev) => new Set(prev).add(index));
   };
 
@@ -39,6 +51,7 @@ const NavBar: React.FC = () => {
               key={index}
               className={`jumping-letter ${animatedLetters.has(index) ? 'jump' : ''}`}
               onMouseEnter={() => handleMouseEnter(index)}
+              onTouchStart={() => handleTouchStart(index)}
               onAnimationEnd={() => handleAnimationEnd(index)}
             >
               {char === ' ' ? '\u00A0' : char}{' '}
