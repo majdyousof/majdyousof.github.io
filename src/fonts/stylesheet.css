@@ -1,51 +1,31 @@
 @font-face {
   font-family: 'cmu_serifroman';
-  src: url('cmunrm-webfont.eot');
   src:
-    url('cmunrm-webfont.eot?#iefix') format('embedded-opentype'),
-    url('cmunrm-webfont.woff2') format('woff2'),
-    url('cmunrm-webfont.woff') format('woff'),
-    url('cmunrm-webfont.ttf') format('truetype'),
-    url('cmunrm-webfont.svg#cmu_serifroman') format('svg');
+    url('cmunrm-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'cmu_serifroman';
-  src: url('cmunti-webfont.eot');
   src:
-    url('cmunti-webfont.eot?#iefix') format('embedded-opentype'),
-    url('cmunti-webfont.woff2') format('woff2'),
-    url('cmunti-webfont.woff') format('woff'),
-    url('cmunti-webfont.ttf') format('truetype'),
-    url('cmunti-webfont.svg#cmu_serifitalic') format('svg');
+    url('cmunti-webfont.woff') format('woff');
   font-weight: normal;
   font-style: italic; /* Indicates this is the italic style */
 }
 
 @font-face {
   font-family: 'cmu_serifroman';
-  src: url('cmunbi-webfont.eot');
   src:
-    url('cmunbi-webfont.eot?#iefix') format('embedded-opentype'),
-    url('cmunbi-webfont.woff2') format('woff2'),
-    url('cmunbi-webfont.woff') format('woff'),
-    url('cmunbi-webfont.ttf') format('truetype'),
-    url('cmunbi-webfont.svg#cmu_serifbolditalic') format('svg');
+    url('cmunbi-webfont.woff') format('woff');
   font-weight: bold;
   font-style: italic; /* Indicates this is the bold italic style */
 }
 
 @font-face {
   font-family: 'cmu_serifroman';
-  src: url('cmunbx-webfont.eot');
   src:
-    url('cmunbx-webfont.eot?#iefix') format('embedded-opentype'),
-    url('cmunbx-webfont.woff2') format('woff2'),
-    url('cmunbx-webfont.woff') format('woff'),
-    url('cmunbx-webfont.ttf') format('truetype'),
-    url('cmunbx-webfont.svg#cmu_serifbold') format('svg');
+    url('cmunbx-webfont.woff') format('woff');
   font-weight: bold; /* Indicates this is the bold style */
   font-style: normal;
 }
