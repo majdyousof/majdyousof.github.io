@@ -2,6 +2,8 @@
   box-shadow: none !important; /* Remove the default shadow for a cleaner look */
   background-color: transparent !important; /* Remove the default background color */
   height: 60px; /* Adjust height to make the AppBar skinnier */
+  position: static; /* Remove fixed positioning */
+  z-index: 10; /* Ensure the navbar is on top */
 }
 
 .toolbar {
@@ -15,6 +17,7 @@
   font-family: 'cmu_serifroman', serif !important; /* Change font family */
   font-weight: bold; /* Add bold font weight */
   text-transform: none !important; /* Remove uppercase transformation */
+  transition: filter 0.3s ease; /* Smooth transition for blur effect */
 }
 
 .brand-dot {

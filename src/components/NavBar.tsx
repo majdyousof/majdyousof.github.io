@@ -7,15 +7,15 @@ import '../styling/NavBar.css';
 
 const NavBar: React.FC = () => {
   return (
-    <AppBar position="sticky" className="navbar">
+    <AppBar className="navbar">
       <Toolbar className="toolbar">
         <Typography variant='h4' className="navbar-brand">
           Majd Yousof<span className="brand-dot">.</span>
         </Typography>
         <div className="navbar-buttons">
           <Button color="inherit" href="#home">Home</Button>
-          <Button color="inherit" href="#about">About</Button>
-          <Button color="inherit" href="#services">Services</Button>
+          <Button color="inherit" href="#about">Github</Button>
+          <Button color="inherit" href="#services">LinkedIn</Button>
           <Button color="inherit" href="#contact">Contact</Button>
         </div>
       </Toolbar>
