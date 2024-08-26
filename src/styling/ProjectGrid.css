@@ -56,30 +56,21 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Apply hover styles only if the card has a link */
 .project-card.has-link:hover {
-  background-color: #333; /* Optional: Slight background change on hover */
+  background-color: #333;
 }
 
 .project-card.has-link:hover h3 {
-  color: orange; /* Highlight text color on hover */
-  text-decoration: underline; /* Underline text on hover */
+  color: orange;
+  text-decoration: underline;
 }
 
-/* Ensure links inside the card are styled correctly */
-.project-card.has-link a {
-  text-decoration: none; /* Remove default underline from link */
-  color: inherit; /* Inherit color from parent */
-}
-
-/* Optional: Hover effect on the entire project card */
 .project-card.has-link:hover {
-  transform: scale(1.02); /* Scale up slightly */
-}
-
-.project-card:hover {
   transform: scale(1.02);
 }
 
@@ -88,7 +79,8 @@
 }
 
 .project-card p {
-  text-align: left; /* Ensure the text is left-aligned */
+  text-align: left;
+  flex-grow: 1;
 }
 
 .project-card a {
@@ -96,19 +88,24 @@
   color: inherit;
 }
 
-.tags {
-  margin-top: 10px;
+/* Horizontal line above the tags */
+.project-card .tags {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #555;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+/* Styling for individual tags */
 .tag {
   display: inline-block;
   background-color: orange;
   color: black;
   padding: 5px 10px;
-  border-radius: 4px;
+  border-radius: 16px;
   margin-right: 5px;
-  margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -120,8 +117,10 @@
 }
 
 .tag:hover {
-  background-color: #ffa726;
+  background-color: #fdc358;
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
