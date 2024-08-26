@@ -1,19 +1,17 @@
 export const projects = [
   {
     title: 'Truss Finite Element Analysis',
-    description: 'Finite Analysis and animation of a truss structure using MATLAB.',
+    description:
+      'Finite Analysis and animation of a truss structure using MATLAB.',
     technologies: ['MATLAB', 'FEA', 'OOP'],
     link: 'https://github.com/majdyousof/MATLAB-Truss-FEA',
   },
   {
-    title: 'Project 2',
-    description: 'This is a description for project 2.',
-    technologies: ['Python', 'Flask', 'SQL'],
-  },
-  {
-    title: 'Project 3',
-    description: 'This is a description for project 3.',
-    technologies: ['C#', '.NET', 'Azure'],
+    title: 'Personal Website (this site)',
+    description:
+      'This website was built using React and Typescript, with some Latex elements for aesthetics and some mathematics.',
+    technologies: ['React', 'Typescript', 'CSS', 'Latex'],
+    link: 'https://github.com/majdyousof/majdyousof.github.io',
   },
   // Add more projects here
 ];

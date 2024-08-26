@@ -8,7 +8,6 @@ import { projects } from '../data/projects';
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const App: React.FC = () => {
-
   return (
     <div className="App">
       <NavBar />
