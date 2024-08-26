@@ -6,7 +6,7 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  link: string;
+  link?: string;
 }
 
 interface ProjectGridProps {
