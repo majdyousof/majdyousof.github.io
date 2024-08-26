@@ -6,7 +6,7 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  status: 'WIP' | 'Done' | 'Unfinished';
+  status: string; //TODO: Change to enum
   link?: string;
 }
 
