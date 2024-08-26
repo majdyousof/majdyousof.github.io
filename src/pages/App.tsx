@@ -1,11 +1,14 @@
 import React from 'react';
 import Section from '../components/Section';
-import SubSection from '../components/SubSection';
-import MathExample from '../components/MathExample';
 import NavBar from '../components/NavBar';
+import ProjectGrid from '../components/ProjectGrid';
 import '../styling/App.css';
 
+import { projects } from '../data/projects';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+
 const App: React.FC = () => {
+
   return (
     <div className="App">
       <NavBar />
@@ -20,7 +23,7 @@ const App: React.FC = () => {
             using:
           </p>
           <ul className="orange">
-            <li>C#</li>
+            <li>C# (.NET)</li>
             <li>Typescript</li>
             <li>Python</li>
             <li>MATLAB</li>
@@ -35,21 +38,38 @@ const App: React.FC = () => {
           </p>
           <p>
             In my free time, I enjoy fashion, going to the gym, wood carving and
-            watching cat videos! 🐱{' '}
+            watching cat videos! 🐱
           </p>
-          <p>THIS PAGE IS WIP!!!!</p>
         </Section>
 
-        <Section title="Mathematics">
-          <SubSection title="Integrals">
-            <p>Here is an example of an integral:</p>
-            <MathExample />
-            {/* Add additional MathExample components as needed */}
-          </SubSection>
+        <Section title="Projects">
+          <ProjectGrid projects={projects} />
         </Section>
 
-        <Section title="Conclusion">
-          <p>Thanks for reading!</p>
+        <Section title="Contact">
+          <ul className="contact-list">
+            <li>
+              <a href="mailto:majdyousof@gmail.com" className="orange">
+                <FaEnvelope className="social-logo" />
+                Email
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/majdyousof/"
+                className="orange"
+              >
+                <FaLinkedin className="social-logo" />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/majdyousof/" className="orange">
+                <FaGithub className="social-logo" />
+                Github
+              </a>
+            </li>
+          </ul>
         </Section>
       </div>
     </div>

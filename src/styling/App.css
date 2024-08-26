@@ -37,3 +37,28 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Contact Section Styling */
+.contact-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.contact-list li {
+  margin-bottom: 10px; /* Add space between list items */
+}
+
+.social-logo {
+  width: 20px; /* Set the width of the logos */
+  height: 20px; /* Set the height of the logos */
+  margin-right: 8px; /* Add space between the logo and the text */
+  vertical-align: middle; /* Align the logo with the text */
+}
+
+/* Optional: Adjust the font size or icon size for smaller screens */
+@media (max-width: 480px) {
+  .social-logo {
+    width: 18px; /* Slightly reduce icon size for very small screens */
+    height: 18px;
+  }
+}
