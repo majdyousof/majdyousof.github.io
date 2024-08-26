@@ -83,9 +83,6 @@ const NavBar: React.FC = () => {
             >
               LinkedIn
             </Button>
-            <Button color="inherit" href="#contact">
-              Contact
-            </Button>
           </div>
           <IconButton
             className="menu-button"
@@ -137,14 +134,6 @@ const NavBar: React.FC = () => {
               className="menu-item"
             >
               LinkedIn
-            </MenuItem>
-            <MenuItem
-              onClick={handleMenuClose}
-              component="a"
-              href="#contact"
-              className="menu-item"
-            >
-              Contact
             </MenuItem>
           </Menu>
         </div>
