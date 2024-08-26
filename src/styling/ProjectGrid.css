@@ -1,5 +1,14 @@
+.filter-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-select {
+  flex: 1;
+}
+
 .react-select-container {
-  margin-top: 10px;
   color: #3b3b3b;
 }
 
@@ -41,6 +50,32 @@
 
 .chip:hover {
   background-color: orangered;
+}
+
+.status-wrapper {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #555;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-wip {
+  color: coral;
+}
+
+.status-done {
+  color: greenyellow;
+}
+
+.status-unfinished {
+  color: red;
 }
 
 .projects-grid {
@@ -88,16 +123,12 @@
   color: inherit;
 }
 
-/* Horizontal line above the tags */
 .project-card .tags {
   margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid #555;
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Styling for individual tags */
 .tag {
   display: inline-block;
   background-color: orange;
@@ -120,52 +151,46 @@
   background-color: #fdc358;
 }
 
-
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(200px, 1fr)
-    ); /* Adjust column width for tablets */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
   .project-card {
-    padding: 15px; /* Reduce padding for smaller screens */
+    padding: 15px;
   }
 
   .chip {
-    font-size: 10px; /* Adjust font size for chips on smaller screens */
+    font-size: 10px;
   }
 
   .tag {
-    font-size: 12px; /* Adjust font size for tags */
+    font-size: 12px;
   }
 
   .selected-chips {
-    margin: 15px 0; /* Adjust margin for chips */
+    margin: 15px 0;
   }
 }
 
 @media (max-width: 480px) {
   .projects-grid {
-    grid-template-columns: 1fr; /* Single column layout for very small screens */
+    grid-template-columns: 1fr;
   }
 
   .project-card {
-    padding: 10px; /* Further reduce padding */
+    padding: 10px;
   }
 
   .chip {
-    font-size: 8px; /* Further reduce font size for very small screens */
+    font-size: 8px;
   }
 
   .tag {
-    font-size: 10px; /* Further reduce font size for very small screens */
+    font-size: 10px;
   }
 
   .selected-chips {
-    margin: 10px 0; /* Further adjust margin */
+    margin: 10px 0;
   }
 }
