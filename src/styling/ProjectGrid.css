@@ -4,6 +4,19 @@
   margin-bottom: 20px;
 }
 
+/* Flex direction for larger screens (side by side) */
+.filter-container {
+  flex-direction: row;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 15px; /* Adjust gap to provide space between stacked filters */
+  }
+}
+
 .filter-select {
   flex: 1;
 }

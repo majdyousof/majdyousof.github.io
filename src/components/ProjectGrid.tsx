@@ -83,7 +83,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
               selectedTechs.includes(option.value)
             )}
             onChange={handleTechChange}
-            placeholder="Select techs..."
+            placeholder="Select technologies..."
             className="react-select-container"
             classNamePrefix="react-select"
           />
