@@ -18,7 +18,7 @@ export const projects = [
   {
     title: 'Heathrow Surface Access Dashboard',
     description:
-      'A dashboard built using Python, Pandas, Plotly and Streamlit to visualize the surface access to Heathrow Airport. This was done to accompany a group report that scored 83.77%.',
+      'A dashboard built using Python, Pandas, Plotly and Streamlit to visualize the surface access to Heathrow Airport. This was done to accompany a group report that scored 83.77%, winning the Peter Fraenkel Prize for the best Project in the year.',
     technologies: ['Python', 'Pandas', 'Plotly', 'Streamlit'],
     status: 'Done',
     link: 'https://heathrow-surface-access-assessment.streamlit.app/',
