@@ -33,7 +33,7 @@ const App: React.FC = () => {
             internship experience and/or personal projects. I have a keen
             interest in technology, particularly related to trading, as I have
             interned as a software engineer at a trading firm this past summer.
-            Additionally, I have completed an undergraduate reasearch placement
+            Additionally, I have completed an undergraduate academic research placement
             at the{' '}
             <a
               href="https://www.imperial.ac.uk/transport-engineering/transport-strategy-centre/"
