@@ -18,8 +18,8 @@ const App: React.FC = () => {
             <a href="https://www.imperial.ac.uk/" className="orange">
               Imperial College London
             </a>
-            . I have a keen interest in Software Engineering, with experience
-            using:
+            . I have a keen interest in Transport Modelling and Software
+            Engineering, with experience using:
           </p>
           <ul className="orange">
             <li>C# (.NET)</li>
@@ -31,9 +31,19 @@ const App: React.FC = () => {
           <p>
             I have gained this experience either professionally through
             internship experience and/or personal projects. I have a keen
-            interest in financial technology, particularly related to trading,
-            as I have interned as a software engineer at a trading firm this
-            past summer.
+            interest in technology, particularly related to trading, as I have
+            interned as a software engineer at a trading firm this past summer.
+            Additionally, I have completed an undergraduate reasearch placement
+            at the{' '}
+            <a
+              href="https://www.imperial.ac.uk/transport-engineering/transport-strategy-centre/"
+              className="orange"
+            >
+              Transport Strategy Centre
+            </a>{' '}
+            at Imperial College London, specifically focussing on statistical
+            modelling and analysis of transport data. I am currently working on
+            a paper, so watch this space! 🚀
           </p>
           <p>
             In my free time, I enjoy fashion, going to the gym, wood carving and
