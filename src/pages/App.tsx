@@ -9,7 +9,9 @@ import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const App: React.FC = () => {
   return (
+    
     <div className="App">
+      <meta name="description" content="Final Year MEng student at Imperial College London called Majd Yousof with expertise in Machine Learning and Software Engineering. Experience at Maven Securities, JP Morgan, and research in transport systems. Skilled in Python, C#, React, and data analysis."></meta>
       <NavBar />
       <div className="content-container">
         <Section title="Hi! I am Majd.">
