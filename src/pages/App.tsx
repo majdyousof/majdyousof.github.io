@@ -5,7 +5,7 @@ import ProjectGrid from '../components/ProjectGrid';
 import '../styling/App.css';
 
 import { projects } from '../data/projects';
-import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const App: React.FC = () => {
   return (
@@ -59,12 +59,6 @@ const App: React.FC = () => {
 
         <Section title="Contact">
           <ul className="contact-list">
-            <li>
-              <a href="mailto:majdyousof@gmail.com" className="orange">
-                <FaEnvelope className="social-logo" />
-                Email
-              </a>
-            </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/majdyousof/"
