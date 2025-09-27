@@ -47,14 +47,6 @@ const NavBar: React.FC = () => {
     setAnchorEl(null);
   };
 
-  const onDownloadCV = () => {
-    const link = document.createElement('a');
-    link.download = `majdyousofcv.pdf`;
-    link.href = './majdyousofcv.pdf';
-    link.click();
-    setAnchorEl(null);
-  };
-
   return (
     <AppBar className="navbar">
       <Toolbar className="toolbar">
@@ -76,9 +68,6 @@ const NavBar: React.FC = () => {
         </Typography>
         <div className="navbar-buttons">
           <div className="desktop-buttons">
-            <Button color='inherit' onClick={onDownloadCV}>
-              Download CV
-            </Button>
             <Button color="inherit" component={Link} to="/">
               Home
             </Button>
@@ -114,9 +103,6 @@ const NavBar: React.FC = () => {
             onClose={handleMenuClose}
             classes={{ paper: 'menu-paper' }}
           >
-            <MenuItem onClick={onDownloadCV} className="menu-item">
-              Download CV
-            </MenuItem>
             <MenuItem
               onClick={handleMenuClose}
               component={Link}
