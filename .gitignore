@@ -39,6 +39,7 @@ coverage
 .DS_Store
 *.sw?
 *.tmp
+*.tsbuildinfo
 tmp
 dist
 build

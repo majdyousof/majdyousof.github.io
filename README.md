@@ -45,6 +45,8 @@ Articles are discovered automatically, listed by date, and available at `/articl
 
 Markdown supports GitHub-flavoured features, including tables and task lists. Maths use KaTeX syntax: `$E = mc^2$` inline, or `$$` on separate lines for display equations.
 
+Use standard Markdown footnotes for marginal notes: `A claim.[^1]`, followed by `[^1]: The note.` On wide screens, these appear beside the relevant text; on mobile, they appear directly beneath it.
+
 The RSS feed at `/rss.xml` is regenerated during every build.
 
 ## Deployment

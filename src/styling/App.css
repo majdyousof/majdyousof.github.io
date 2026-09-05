@@ -7,7 +7,7 @@
 }
 .content-container > section {
   margin-bottom: 4.5rem;
-  max-width: 38rem;
+  max-width: var(--reading-width);
 }
 .content-container h1 {
   font-size: 2.6rem;
@@ -44,6 +44,27 @@
 .empty-state {
   color: var(--muted);
   font-style: italic;
+}
+.marginal-note {
+  font-size: 0.9rem;
+}
+.marginal-note span {
+  display: block;
+  margin: 0.35rem 0 0;
+  text-align: left;
+}
+.home-footnotes {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .home-footnotes {
+    border-top: 1px solid var(--rule);
+    display: block;
+    font-size: 0.95rem;
+    margin: 2.5rem 0 0;
+    padding: 1.25rem 0 0 1.3rem;
+  }
 }
 
 @media (max-width: 600px) {
