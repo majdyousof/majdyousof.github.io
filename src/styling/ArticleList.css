@@ -1,22 +1,26 @@
-.project-list {
+.article-list {
   border-top: 1px solid var(--rule);
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.project-entry {
+.article-entry {
   border-bottom: 1px solid var(--rule);
   display: grid;
   gap: 1.5rem;
   grid-template-columns: minmax(0, 1fr) 10rem;
   padding: 1.45rem 0;
 }
-.project-copy p {
+.article-copy h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+.article-copy p {
   font-size: 1rem;
   line-height: 1.45;
   margin: 0.6rem 0 0;
 }
-.project-note {
+.article-note {
   color: var(--muted);
   display: flex;
   flex-direction: column;
@@ -25,16 +29,25 @@
   line-height: 1.25;
   padding-top: 0.2rem;
 }
-.project-note span:first-child {
+.article-note span:first-child {
   color: var(--accent);
   font-style: italic;
 }
+.list-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0 0 1.25rem;
+}
+.list-controls .dropdown-control {
+  margin: 0;
+}
 
 @media (max-width: 600px) {
-  .project-entry {
+  .article-entry {
     display: block;
   }
-  .project-note {
+  .article-note {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem 1rem;

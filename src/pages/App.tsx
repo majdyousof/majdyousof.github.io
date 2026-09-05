@@ -1,29 +1,24 @@
 import React from 'react';
 import Section from '../components/Section';
 import NavBar from '../components/NavBar';
-import ProjectGrid from '../components/ProjectGrid';
+import PageMeta from '../components/PageMeta';
 import '../styling/App.css';
-
-import { projects } from '../data/projects';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <meta
-        name="description"
-        content="Introduction to who Majd who is currently a Graduate Developer at Maven Securities."
-      ></meta>
+      <PageMeta description="Personal website of Majd Yousof, a developer interested in statistics, economics, and computational modelling." />
       <NavBar />
-      <div className="content-container">
-        <Section title="Hi! I am Majd.">
+      <main className="content-container">
+        <Section title="About Me">
           <p>
-            I am currently a Graduate Developer at{' '}
-            <span className="orange">Maven Securities</span>. I have a keen
-            interest in Statistics, Trading, and Transport Modelling with
-            experience using:
+            I am currently a Developer at <span>Maven Securities</span>,
+            currently working in Options Market Making Strategy having completed
+            a rotation in AI Engineering. I have a keen interest in Statistics,
+            Economics, Artificial Intelligence, Computational modelling for
+            social good, with experience using:
           </p>
-          <ul className="orange">
+          <ul className="skills">
             <li>C++</li>
             <li>C# (.NET)</li>
             <li>Typescript</li>
@@ -33,50 +28,31 @@ const App: React.FC = () => {
           </ul>
           <p>
             I have gained this experience either professionally and/or through
-            personal projects. I have a keen interest in technology,
-            particularly related to trading, as I have interned as a software
-            engineer at an Options Market Maker. Additionally, I have completed
-            an undergraduate academic research placement at the{' '}
-            <a
-              href="https://www.imperial.ac.uk/transport-engineering/transport-strategy-centre/"
-              className="orange"
-            >
+            personal projects. Additionally, I have completed an undergraduate
+            academic research placement at the{' '}
+            <a href="https://www.imperial.ac.uk/transport-engineering/transport-strategy-centre/">
               Transport Strategy Centre
             </a>{' '}
             at Imperial College London, specifically focussing on statistical
             modelling and analysis of transport data. I am currently working on
-            a paper, so watch this space! 🚀
+            a paper, so watch this space!
           </p>
           <p>
             In my free time, I enjoy fashion, going to the gym, wood carving and
-            watching cat videos! 🐱
+            watching cat videos.
           </p>
         </Section>
-
-        <Section title="Projects">
-          <ProjectGrid projects={projects} />
-        </Section>
-
         <Section title="Contact">
           <ul className="contact-list">
             <li>
-              <a
-                href="https://www.linkedin.com/in/majdyousof/"
-                className="orange"
-              >
-                <FaLinkedin className="social-logo" />
-                LinkedIn
-              </a>
+              <a href="https://www.linkedin.com/in/majdyousof/">LinkedIn</a>
             </li>
             <li>
-              <a href="https://github.com/majdyousof/" className="orange">
-                <FaGithub className="social-logo" />
-                Github
-              </a>
+              <a href="https://github.com/majdyousof/">GitHub</a>
             </li>
           </ul>
         </Section>
-      </div>
+      </main>
     </div>
   );
 };

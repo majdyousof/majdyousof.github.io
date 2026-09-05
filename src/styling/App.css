@@ -1,64 +1,63 @@
-.App {
-  font-family: 'cmu_serifroman', serif;
-}
-
 .content-container {
-  max-width: 60vw; /* Set the maximum width of the content */
-  margin: 0 auto; /* Center the content horizontally */
-  padding: 80px 20px 20px 20px; /* Add padding at the top to make room for the navbar */
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  font-size: 1.2rem;
+  line-height: 1.45;
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 3.25rem 2rem 5rem;
 }
-
-/* Adjust content for mobile screens */
-@media (max-width: 768px) {
-  .content-container {
-    max-width: 90vw; /* Increase max-width for better readability on smaller screens */
-    padding: 100px 10px 10px 10px; /* Adjust top padding for mobile */
-  }
-
-  .App {
-    font-size: 14px; /* Optional: Decrease font size for mobile devices */
-  }
+.content-container > section {
+  margin-bottom: 4.5rem;
+  max-width: 38rem;
 }
-
-@media (max-width: 480px) {
-  .content-container {
-    max-width: 90vw; /* Even more width for very small screens */
-    padding: 100px 5px 5px 5px; /* Further adjust padding for very small screens */
-  }
-
-  .App {
-    font-size: 14px; /* Optional: Further decrease font size for very small screens */
-  }
+.content-container h1 {
+  font-size: 2.6rem;
+  margin: 0 0 1.4rem;
 }
-
-/* Optional: Adjust body padding if needed */
-body {
+.content-container h2 {
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.25rem;
+}
+.content-container h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+.content-container ul {
+  padding-left: 1.25rem;
+}
+.content-container p {
+  text-align: justify;
+}
+.skills {
+  columns: 2;
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 22rem;
+}
+.content-container .contact-list {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
-
-/* Contact Section Styling */
-.contact-list {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
+.empty-state {
+  color: var(--muted);
+  font-style: italic;
 }
 
-.contact-list li {
-  margin-bottom: 10px; /* Add space between list items */
-}
-
-.social-logo {
-  width: 20px; /* Set the width of the logos */
-  height: 20px; /* Set the height of the logos */
-  margin-right: 8px; /* Add space between the logo and the text */
-  vertical-align: middle; /* Align the logo with the text */
-}
-
-/* Optional: Adjust the font size or icon size for smaller screens */
-@media (max-width: 480px) {
-  .social-logo {
-    width: 18px; /* Slightly reduce icon size for very small screens */
-    height: 18px;
+@media (max-width: 600px) {
+  .content-container {
+    font-size: 1.1rem;
+    padding: 2.5rem 1.25rem 3rem;
+  }
+  .content-container > section {
+    margin-bottom: 3.25rem;
+  }
+  .content-container h1 {
+    font-size: 2.25rem;
+  }
+  .content-container h2 {
+    font-size: 1.7rem;
   }
 }
