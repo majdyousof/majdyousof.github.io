@@ -3,7 +3,10 @@
   --ink: #1c1c19;
   --muted: #62625d;
   --accent: #9b3e1d;
+  --reading-width: 42rem;
   --rule: #d8d5cc;
+  --sidenote-margin: -14rem;
+  --sidenote-width: 12rem;
   font-family: 'Libertinus Serif', Georgia, serif;
   color: var(--ink);
   background: var(--paper);
@@ -44,4 +47,30 @@ h3 {
 }
 p {
   margin: 0 0 1.15rem;
+}
+.sidenote-reference {
+  font-size: 0.72em;
+  margin-left: 0.1em;
+  text-decoration: none;
+}
+.sidenote-number {
+  color: var(--muted);
+  margin-right: 0.35rem;
+  text-decoration: none;
+}
+.marginal-note,
+.sidenote-content {
+  color: var(--muted);
+  display: block;
+  float: right;
+  line-height: 1.35;
+  margin: 0.2rem var(--sidenote-margin) 1rem 1.5rem;
+  width: var(--sidenote-width);
+}
+
+@media (max-width: 960px) {
+  .marginal-note,
+  .sidenote-content {
+    display: none;
+  }
 }

@@ -26,21 +26,52 @@ const App: React.FC = () => {
             <li>MATLAB</li>
             <li>R</li>
           </ul>
-          <p>
+          <p className="with-sidenote">
             I have gained this experience either professionally and/or through
             personal projects. Additionally, I have completed an undergraduate
-            academic research placement at the{' '}
-            <a href="https://www.imperial.ac.uk/transport-engineering/transport-strategy-centre/">
-              Transport Strategy Centre
-            </a>{' '}
-            at Imperial College London, specifically focussing on statistical
-            modelling and analysis of transport data. I am currently working on
-            a paper, so watch this space!
+            academic research placement at Imperial College London
+            <sup>
+              <a
+                className="sidenote-reference"
+                href="#transport-note"
+                id="transport-reference"
+                aria-label="Read footnote 1: Transport Strategy Centre"
+              >
+                1
+              </a>
+            </sup>
+            , specifically focussing on statistical modelling and analysis of
+            transport data. I am currently working on a paper, so watch this
+            space!
+            <span className="marginal-note" aria-hidden="true">
+              <a
+                className="sidenote-number"
+                href="#transport-reference"
+                aria-label="Back to reference 1"
+              >
+                1.
+              </a>
+              <a href="https://www.imperial.ac.uk/transport-engineering/transport-strategy-centre/">
+                Transport Strategy Centre
+              </a>
+              <span>Imperial College London</span>
+            </span>
           </p>
           <p>
             In my free time, I enjoy fashion, going to the gym, wood carving and
             watching cat videos.
           </p>
+          <ol className="home-footnotes">
+            <li id="transport-note">
+              <a href="https://www.imperial.ac.uk/transport-engineering/transport-strategy-centre/">
+                Transport Strategy Centre
+              </a>{' '}
+              at Imperial College London.{' '}
+              <a href="#transport-reference" aria-label="Back to reference 1">
+                ↩
+              </a>
+            </li>
+          </ol>
         </Section>
         <Section title="Contact">
           <ul className="contact-list">

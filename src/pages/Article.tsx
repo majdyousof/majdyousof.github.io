@@ -12,6 +12,7 @@ import {
   formatArticleDate,
   resolveArticleAsset,
 } from '../data/articles';
+import rehypeSidenotes from '../lib/rehypeSidenotes';
 import '../styling/Article.css';
 
 const Article: React.FC = () => {
@@ -36,7 +37,7 @@ const Article: React.FC = () => {
           </header>
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[rehypeKatex]}
+            rehypePlugins={[rehypeKatex, rehypeSidenotes]}
             components={{
               img: ({ src, ...properties }) => (
                 <img

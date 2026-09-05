@@ -1,5 +1,5 @@
 .article-page article {
-  max-width: 38rem;
+  max-width: var(--reading-width);
 }
 .back-link {
   color: var(--muted);
@@ -48,6 +48,15 @@
   background: none;
   padding: 0;
 }
+.article-page .sidenote-reference {
+  vertical-align: super;
+}
+.article-page .sidenote-content {
+  font-size: 0.78rem;
+}
+.article-page .footnotes {
+  display: none;
+}
 .article-page .katex-display {
   margin: 1.5rem 0;
   overflow-x: auto;
@@ -80,6 +89,26 @@
 }
 .article-page th {
   font-weight: bold;
+}
+
+@media (max-width: 960px) {
+  .article-page .footnotes {
+    border-top: 1px solid var(--rule);
+    display: block;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+  }
+  .article-page .footnotes h2 {
+    font-size: 1.3rem;
+    margin: 0 0 0.75rem;
+  }
+  .article-page .footnotes ol {
+    font-size: 0.95rem;
+    padding-left: 1.3rem;
+  }
+  .article-page .footnotes p {
+    text-align: left;
+  }
 }
 
 @media (max-width: 600px) {
