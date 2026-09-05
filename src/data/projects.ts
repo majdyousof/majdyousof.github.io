@@ -2,18 +2,10 @@ export const projects = [
   {
     title: 'Truss Finite Element Analysis',
     description:
-      'Finite Analysis and animation of a truss structure using MATLAB.',
+      '2D Finite Analysis of a train traversing a truss structure using MATLAB.',
     technologies: ['MATLAB', 'FEA'],
     status: 'Done',
     link: 'https://github.com/majdyousof/MATLAB-Truss-FEA',
-  },
-  {
-    title: 'Personal Website (this site)',
-    description:
-      'This website was built using React and Typescript, with some Latex elements for aesthetics and some mathematics.',
-    technologies: ['React', 'Typescript', 'CSS'],
-    status: 'WIP',
-    link: 'https://github.com/majdyousof/majdyousof.github.io',
   },
   {
     title: 'Heathrow Surface Access Dashboard',
@@ -23,5 +15,12 @@ export const projects = [
     status: 'Done',
     link: 'https://heathrow-surface-access-assessment.streamlit.app/',
   },
-  // Add more projects here
+  {
+    title: 'Personal Website (this site)',
+    description:
+      'This website was built using React and Typescript, with some Latex elements for aesthetics and some mathematics.',
+    technologies: ['React', 'Typescript', 'CSS'],
+    status: 'WIP',
+    link: 'https://github.com/majdyousof/majdyousof.github.io',
+  },
 ];

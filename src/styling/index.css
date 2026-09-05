@@ -1,124 +1,47 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  --paper: #fffff8;
+  --ink: #1c1c19;
+  --muted: #62625d;
+  --accent: #9b3e1d;
+  --rule: #d8d5cc;
+  font-family: 'Libertinus Serif', Georgia, serif;
+  color: var(--ink);
+  background: var(--paper);
+  color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
+:root[data-theme='dark'] {
+  --paper: #151513;
+  --ink: #f5f1e7;
+  --muted: #c2bdb0;
+  --accent: #e49a75;
+  --rule: #4b4943;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: 'cmu_serifroman', serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0; /* Removed the 2px padding to avoid unintended spacing issues */
+  min-width: 320px;
 }
-
-/* Header styles */
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+a:hover {
+  color: var(--ink);
+}
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'cmu_serifroman', serif;
-  font-weight: bold;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+h3 {
+  font-weight: normal;
+  line-height: 1.05;
 }
-
 p {
-  text-align: justify;
-}
-
-.orange {
-  color: orange;
-}
-
-a {
-  text-decoration: none;
-  color: inherit; /* Ensure links inherit the color of the surrounding text */
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Code block styling */
-code {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-
-.katex {
-  font-size: 1.2em;
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px; /* Slightly smaller text for readability on smaller screens */
-    padding: 10px; /* Add padding for better spacing on mobile */
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1.5rem; /* Adjust heading size for smaller screens */
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  p {
-    margin: 0 0 1rem 0; /* Add spacing between paragraphs */
-  }
-
-  code {
-    font-size: 0.9em; /* Slightly smaller code font size for mobile */
-  }
-
-  .katex {
-    font-size: 1em; /* Adjust math font size for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 12px; /* Further reduce text size for very small screens */
-    padding: 8px; /* Adjust padding for very small screens */
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1.25rem; /* Further adjust heading size */
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    margin: 0 0 0.75rem 0; /* Adjust paragraph spacing */
-  }
-
-  code {
-    font-size: 0.8em; /* Smaller code font size for very small screens */
-  }
-
-  .katex {
-    font-size: 0.9em; /* Further adjust math font size */
-  }
+  margin: 0 0 1.15rem;
 }

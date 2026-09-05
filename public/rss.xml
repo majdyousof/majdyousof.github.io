@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Majd Yousof</title>
+    <description>Articles and notes by Majd Yousof.</description>
+    <link>https://majdyousof.github.io</link>
+    <item>
+      <title>A note.</title>
+      <description>My goals and aspirations for this site.</description>
+      <link>https://majdyousof.github.io/articles/a-note-on-this-site</link>
+      <guid>https://majdyousof.github.io/articles/a-note-on-this-site</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

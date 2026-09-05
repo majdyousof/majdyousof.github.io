@@ -1,73 +1,52 @@
-# Personal Website
+# Majd Yousof
 
-This is the repository for my personal website, built using React with TypeScript. The website showcases my projects, CV, blog posts, and other information about me.
+A personal website for projects and Markdown-based articles, built with React, TypeScript, Vite, and Bun.
 
-# Contents
+## Development
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Start-up](#start-up)
-- [Scripts](#scripts)
-
-# Features
-
-- 📝 Blog: Share articles and tutorials.
-- 👨‍💻 Projects: Showcase my work and personal projects.
-- 📄 CV: Provide a downloadable version of my CV (WIP).
-- 🌐 Responsive Design: Mobile-friendly website.
-
-# Tech Stack
-
-- Frontend: [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
-- Styling: [CSS Modules](https://github.com/css-modules/css-modules)
-- Routing: [React Router](https://reactrouter.com/en/main)
-- Bundling: [Vite](https://vite.dev)
-
-# Start-up
-
-## Prerequisites
-
-You must have the following installed:
-
-- **Node.js** (>= 14.x)
-- **npm** or **yarn**
-
-## Installation
-
-1. Clone the repository and open up the project directory
-2. Install the project dependencies:
+Install dependencies and start the local server:
 
 ```bash
-npm install #if you are using npm
-yarn install #if you are using yarn
+bun install
+bun run dev
 ```
 
-## Running the Development Server
+Useful commands:
 
-To run the development server, use the following commands:
+- `bun run build` — generates the RSS feed, type-checks, and creates a production build.
+- `bun run lint` — checks source quality.
+- `bun run format` — formats source files.
+- `bun run preview` — serves the production build locally.
 
-```bash
-npm run dev #if you are using npm
-yarn dev #if you are using yarn
+## Articles
+
+Each article is a folder in `src/content/articles`. The folder name becomes the URL slug; its Markdown lives in `index.md`, with any article-specific images beside it:
+
+```text
+src/content/articles/my-new-note/
+├── index.md
+└── diagram.png
 ```
 
-This will run the app in development on a port on yor computer.
+Start `index.md` with frontmatter:
 
-## Building for Production
+```md
+---
+title: Article title
+description: A concise summary for the article index and search previews.
+date: 2026-09-05
+tags: Topic, Another topic
+---
 
-To create an optimized production build:
-
-```bash
-npm run build #if you are using npm
-yarn build #if you are using yarn
+# Article title
 ```
 
-The build files will be output to the `dist/` directory.
+Articles are discovered automatically, listed by date, and available at `/articles/<folder-name>`. Reading time is calculated from the body; no manual field is needed. Reference local images with standard relative Markdown paths, such as `![Diagram](./diagram.png)`.
 
-# Scripts
+Markdown supports GitHub-flavoured features, including tables and task lists. Maths use KaTeX syntax: `$E = mc^2$` inline, or `$$` on separate lines for display equations.
 
-- `dev`: Runs the development server.
-- `build`: Builds the app for production.
-- `lint`: Lints the TypeScript files.
-- `format`: Formats/Refactors the files using Prettier
-- `deploy`: Deploys the website through Github Pages (*Requires Github Actions set up*)
+The RSS feed at `/rss.xml` is regenerated during every build.
+
+## Deployment
+
+GitHub Actions deploys the site to GitHub Pages when changes are pushed to `main`. Direct links work through a lightweight `404.html` fallback for the single-page app.

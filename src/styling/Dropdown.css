@@ -1,0 +1,105 @@
+.dropdown-control {
+  align-items: center;
+  color: var(--muted);
+  display: inline-flex;
+  font-size: 0.85rem;
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown summary {
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  min-width: 7.5rem;
+  padding: 0.25rem 1.6rem 0.25rem 0.45rem;
+  position: relative;
+}
+
+.dropdown summary::-webkit-details-marker {
+  display: none;
+}
+.dropdown summary:hover,
+.dropdown[open] summary {
+  border-color: var(--accent);
+}
+.dropdown-chevron {
+  color: var(--muted);
+  pointer-events: none;
+  position: absolute;
+  right: 0.5rem;
+}
+
+.dropdown-menu {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  left: 0;
+  margin-top: 0.35rem;
+  min-width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-options {
+  display: grid;
+  gap: 0.2rem;
+  max-height: 12rem;
+  overflow-y: auto;
+  padding: 0.45rem;
+}
+
+.dropdown-options label,
+.dropdown-options button,
+.dropdown-footer button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: 0.45rem;
+  padding: 0.25rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dropdown-options label:hover,
+.dropdown-options button:hover,
+.dropdown-options button.selected {
+  background: color-mix(in srgb, var(--accent) 12%, var(--paper));
+  color: var(--accent);
+}
+
+.dropdown-options button:disabled,
+.dropdown-footer button:disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.dropdown-options button:disabled:hover,
+.dropdown-footer button:disabled:hover {
+  background: transparent;
+}
+
+.dropdown-footer {
+  border-top: 1px solid var(--rule);
+  padding: 0.45rem;
+}
+
+.dropdown-footer button {
+  padding: 0.25rem;
+}
+
+.dropdown-footer button:hover {
+  background: color-mix(in srgb, var(--accent) 12%, var(--paper));
+  color: var(--accent);
+}
