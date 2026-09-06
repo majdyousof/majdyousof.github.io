@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import PageMeta from '../components/PageMeta';
 import ProjectGrid from '../components/ProjectGrid';
@@ -36,6 +37,7 @@ const Projects: React.FC = () => {
           <ProjectGrid projects={visibleProjects} />
         </section>
       </main>
+      <Footer />
     </div>
   );
 };

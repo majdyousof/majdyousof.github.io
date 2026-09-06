@@ -8,7 +8,7 @@
   border-bottom: 1px solid var(--rule);
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: minmax(0, 1fr) 10rem;
+  grid-template-columns: minmax(0, 1fr) var(--sidenote-width);
   padding: 1.45rem 0;
 }
 .project-copy p {

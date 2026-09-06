@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import Section from '../components/Section';
 import NavBar from '../components/NavBar';
 import PageMeta from '../components/PageMeta';
@@ -15,7 +16,7 @@ const App: React.FC = () => {
             I am currently a Developer at <span>Maven Securities</span>,
             currently working in Options Market Making Strategy having completed
             a rotation in AI Engineering. I have a keen interest in Statistics,
-            Economics, Artificial Intelligence, Computational modelling for
+            Economics, Artificial Intelligence, and Computational modelling for
             social good, with experience using:
           </p>
           <ul className="skills">
@@ -41,8 +42,7 @@ const App: React.FC = () => {
               </a>
             </sup>
             , specifically focussing on statistical modelling and analysis of
-            transport data. I am currently working on a paper, so watch this
-            space!
+            transport data for inference and benchmarking.
             <span className="marginal-note" aria-hidden="true">
               <a
                 className="sidenote-number"
@@ -58,8 +58,8 @@ const App: React.FC = () => {
             </span>
           </p>
           <p>
-            In my free time, I enjoy fashion, going to the gym, wood carving and
-            watching cat videos.
+            In my free time, I enjoy fashion, going to the gym, wood carving,
+            home-labbing, and watching cat videos.
           </p>
           <ol className="home-footnotes">
             <li id="transport-note">
@@ -84,6 +84,7 @@ const App: React.FC = () => {
           </ul>
         </Section>
       </main>
+      <Footer />
     </div>
   );
 };
