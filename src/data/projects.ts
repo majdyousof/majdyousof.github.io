@@ -8,6 +8,14 @@ export const projects = [
     link: 'https://github.com/majdyousof/MATLAB-Truss-FEA',
   },
   {
+    title: 'Transport Demand and Economics',
+    description:
+      'A Discrete Choice Modelling project investigating the effect of introducing micromobility on travel behaviour.',
+    technologies: ['Python', 'Biogeme', 'Pandas', 'Discrete Choice Modelling'],
+    status: 'Done',
+    link: 'https://github.com/majdyousof/TDECoursework',
+  },
+  {
     title: 'Heathrow Surface Access Dashboard',
     description:
       'A dashboard built using Python, Pandas, Plotly and Streamlit to visualize the surface access to Heathrow Airport. This was done to accompany a group report that scored 83.77%, winning the Peter Fraenkel Prize for the best project in the year group.',
