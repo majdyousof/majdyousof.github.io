@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: 'Truss Finite Element Analysis',
+    title: 'Heathrow Surface Access Dashboard',
     description:
-      '2D Finite Analysis of a train traversing a truss structure using MATLAB.',
-    technologies: ['MATLAB', 'FEA'],
+      'A dashboard built using Python, Pandas, Plotly and Streamlit to visualize the surface access to Heathrow Airport. This was done to accompany a group report that scored 83.77%, winning the Peter Fraenkel Prize for the best project in the year group.',
+    technologies: ['Python', 'Pandas', 'Plotly', 'Streamlit', 'CBA', 'Coursework'],
     status: 'Done',
-    link: 'https://github.com/majdyousof/MATLAB-Truss-FEA',
+    link: 'https://www.majdyousof.com/heathrow-surface-access/',
   },
   {
     title: 'Transport Demand and Economics',
@@ -16,12 +16,12 @@ export const projects = [
     link: 'https://github.com/majdyousof/TDECoursework',
   },
   {
-    title: 'Heathrow Surface Access Dashboard',
+    title: 'Truss Finite Element Analysis',
     description:
-      'A dashboard built using Python, Pandas, Plotly and Streamlit to visualize the surface access to Heathrow Airport. This was done to accompany a group report that scored 83.77%, winning the Peter Fraenkel Prize for the best project in the year group.',
-    technologies: ['Python', 'Pandas', 'Plotly', 'Streamlit'],
+      '2D Finite Analysis of a train traversing a truss structure using MATLAB.',
+    technologies: ['MATLAB', 'FEA'],
     status: 'Done',
-    link: 'https://heathrow-surface-access-assessment.streamlit.app/',
+    link: 'https://github.com/majdyousof/MATLAB-Truss-FEA',
   },
   {
     title: 'Personal Website (this site)',
