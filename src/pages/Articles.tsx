@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ArticleList from '../components/ArticleList';
 import Dropdown from '../components/Dropdown';
+import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import PageMeta from '../components/PageMeta';
 import TagFilter from '../components/TagFilter';
@@ -67,6 +68,7 @@ const Articles: React.FC = () => {
           <ArticleList articles={visibleArticles} />
         </section>
       </main>
+      <Footer />
     </div>
   );
 };

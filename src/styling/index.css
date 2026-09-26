@@ -48,6 +48,17 @@ h3 {
 p {
   margin: 0 0 1.15rem;
 }
+.site-footer {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 1rem 2rem 2rem;
+}
+.site-footer p {
+  margin: 0;
+}
 .sidenote-reference {
   font-size: 0.72em;
   margin-left: 0.1em;
@@ -72,5 +83,11 @@ p {
   .marginal-note,
   .sidenote-content {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 0.9rem 1.25rem 1.5rem;
   }
 }

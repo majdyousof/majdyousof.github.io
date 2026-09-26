@@ -5,6 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import { Link, Navigate, useParams } from 'react-router-dom';
+import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import PageMeta from '../components/PageMeta';
 import {
@@ -51,6 +52,7 @@ const Article: React.FC = () => {
           </ReactMarkdown>
         </article>
       </main>
+      <Footer />
     </div>
   );
 };
