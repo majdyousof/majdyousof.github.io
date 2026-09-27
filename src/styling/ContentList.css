@@ -1,22 +1,26 @@
-.project-list {
+.content-list {
   border-top: 1px solid var(--rule);
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.project-entry {
+.content-entry {
   border-bottom: 1px solid var(--rule);
   display: grid;
   gap: 1.5rem;
   grid-template-columns: minmax(0, 1fr) var(--sidenote-width);
   padding: 1.45rem 0;
 }
-.project-copy p {
+.content-copy h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+.content-copy p {
   font-size: 1rem;
   line-height: 1.45;
   margin: 0.6rem 0 0;
 }
-.project-note {
+.content-note {
   color: var(--muted);
   display: flex;
   flex-direction: column;
@@ -25,16 +29,15 @@
   line-height: 1.25;
   padding-top: 0.2rem;
 }
-.project-note span:first-child {
+.content-note time {
   color: var(--accent);
   font-style: italic;
 }
-
 @media (max-width: 600px) {
-  .project-entry {
+  .content-entry {
     display: block;
   }
-  .project-note {
+  .content-note {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
