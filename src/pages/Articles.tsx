@@ -1,40 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ArticleList from '../components/ArticleList';
-import Dropdown from '../components/Dropdown';
 import Footer from '../components/Footer';
+import ListControls from '../components/ListControls';
 import NavBar from '../components/NavBar';
 import PageMeta from '../components/PageMeta';
-import TagFilter from '../components/TagFilter';
-import { articles } from '../data/articles';
+import { articles, type Article } from '../data/articles';
+import { dateSortOptions, useFilteredList } from '../hooks/useFilteredList';
 import '../styling/App.css';
 
 const sortOptions = {
-  newest: 'Newest first',
-  oldest: 'Oldest first',
-  longest: 'Longest read',
-  shortest: 'Shortest read',
-} as const;
-
-type ArticleSort = keyof typeof sortOptions;
+  ...dateSortOptions,
+  longest: {
+    label: 'Longest read',
+    compare: (first: Article, second: Article) =>
+      second.readingTimeMinutes - first.readingTimeMinutes,
+  },
+  shortest: {
+    label: 'Shortest read',
+    compare: (first: Article, second: Article) =>
+      first.readingTimeMinutes - second.readingTimeMinutes,
+  },
+};
 
 const Articles: React.FC = () => {
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [sort, setSort] = useState<ArticleSort>('newest');
-  const tags = [...new Set(articles.flatMap((article) => article.tags))].sort();
-  const visibleArticles = [
-    ...(selectedTags.length
-      ? articles.filter((article) =>
-          selectedTags.some((tag) => article.tags.includes(tag))
-        )
-      : articles),
-  ].sort((first, second) => {
-    if (sort === 'oldest') return first.date.localeCompare(second.date);
-    if (sort === 'longest')
-      return second.readingTimeMinutes - first.readingTimeMinutes;
-    if (sort === 'shortest')
-      return first.readingTimeMinutes - second.readingTimeMinutes;
-    return second.date.localeCompare(first.date);
-  });
+  const { items: visibleArticles, ...controls } = useFilteredList(
+    articles,
+    sortOptions,
+    'newest'
+  );
 
   return (
     <div className="App">
@@ -46,25 +39,7 @@ const Articles: React.FC = () => {
       <main className="content-container">
         <section>
           <h1>Articles</h1>
-          <div className="list-controls">
-            <TagFilter
-              tags={tags}
-              selectedTags={selectedTags}
-              onChange={setSelectedTags}
-            />
-            <Dropdown label="Sort" value={sortOptions[sort]} closeOnOptionClick>
-              {Object.entries(sortOptions).map(([value, label]) => (
-                <button
-                  className={sort === value ? 'selected' : ''}
-                  key={value}
-                  type="button"
-                  onClick={() => setSort(value as ArticleSort)}
-                >
-                  {label}
-                </button>
-              ))}
-            </Dropdown>
-          </div>
+          <ListControls {...controls} />
           <ArticleList articles={visibleArticles} />
         </section>
       </main>

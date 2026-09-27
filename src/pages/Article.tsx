@@ -8,11 +8,8 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import PageMeta from '../components/PageMeta';
-import {
-  articles,
-  formatArticleDate,
-  resolveArticleAsset,
-} from '../data/articles';
+import { articles, resolveArticleAsset } from '../data/articles';
+import { formatDate } from '../lib/dates';
 import rehypeSidenotes from '../lib/rehypeSidenotes';
 import '../styling/Article.css';
 
@@ -33,7 +30,7 @@ const Article: React.FC = () => {
         <article>
           <header className="article-header">
             <p>
-              {formatArticleDate(article.date)} · {article.readingTime}
+              {formatDate(article.date)} · {article.readingTime}
             </p>
           </header>
           <ReactMarkdown
